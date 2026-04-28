@@ -67,6 +67,24 @@ export const presentations: Presentation[] = [
   },
 ];
 
+export interface Recognition {
+  title: string;
+  description: string;
+  links: { label: string; url: string }[];
+}
+
+export const recognitions: Recognition[] = [
+  {
+    title: "ASU Research Enterprise Innovation Challenge — Winner",
+    description:
+      "Won the annual innovation challenge for developing a blockchain prototype to improve medical supply tracking and delivery to NGOs, in partnership with the Air Force Institute of Technology.",
+    links: [
+      { label: "ASU News", url: "https://news.asu.edu/20200612-blockchain-solutions-could-aid-pandemic-military-supply-chain" },
+      { label: "AFIT News", url: "https://www.afit.edu/ENS/news.cfm?article=0B6947" },
+    ],
+  },
+];
+
 export const education: Education[] = [
   {
     degree: "M.S.",

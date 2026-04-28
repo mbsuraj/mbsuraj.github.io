@@ -1,4 +1,4 @@
-import { projects, presentations } from "../data/research";
+import { projects, presentations, recognitions } from "../data/research";
 
 const applications = projects.filter((p) => p.category === "application");
 const research = projects.filter((p) => p.category === "research");
@@ -100,6 +100,39 @@ export default function ResearchPage() {
                     >
                       {kw}
                     </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+      {recognitions.length > 0 && (
+        <section className="space-y-6">
+          <h2 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400 font-mono">
+            Recognition
+          </h2>
+          <div className="space-y-6">
+            {recognitions.map((rec) => (
+              <article
+                key={rec.title}
+                className="rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 space-y-3"
+              >
+                <h3 className="text-lg font-bold leading-snug">{rec.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  {rec.description}
+                </p>
+                <div className="flex gap-4">
+                  {rec.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:underline"
+                    >
+                      {link.label} →
+                    </a>
                   ))}
                 </div>
               </article>
