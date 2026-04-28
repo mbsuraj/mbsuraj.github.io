@@ -1,4 +1,4 @@
-import { projects, presentations, recognitions } from "../data/research";
+import { projects, presentations, recognitions, memberships, researchInterests } from "../data/research";
 
 const applications = projects.filter((p) => p.category === "application");
 const research = projects.filter((p) => p.category === "research");
@@ -31,6 +31,11 @@ function ProjectCard({ pkg }: { pkg: (typeof projects)[number] }) {
         {pkg.paperUrl && (
           <a href={pkg.paperUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:underline">
             Paper →
+          </a>
+        )}
+        {pkg.pypiUrl && (
+          <a href={pkg.pypiUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:underline">
+            PyPI →
           </a>
         )}
       </div>
@@ -136,6 +141,53 @@ export default function ResearchPage() {
                   ))}
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {researchInterests.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400 font-mono">
+            Research Interests
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {researchInterests.map((interest) => (
+              <span
+                key={interest}
+                className="px-3 py-1.5 text-xs font-medium rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-white/5"
+              >
+                {interest}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {memberships.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400 font-mono">
+            Memberships
+          </h2>
+          <div className="space-y-3">
+            {memberships.map((m) => (
+              <div key={m.organization} className="flex items-baseline gap-2">
+                {m.url ? (
+                  <a
+                    href={m.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-teal-600 dark:text-teal-400 hover:underline"
+                  >
+                    {m.organization}
+                  </a>
+                ) : (
+                  <span className="text-sm text-gray-700 dark:text-gray-300">{m.organization}</span>
+                )}
+                {m.abbreviation && (
+                  <span className="text-[11px] text-gray-400 dark:text-gray-500">({m.abbreviation})</span>
+                )}
+              </div>
             ))}
           </div>
         </section>

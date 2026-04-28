@@ -8,6 +8,7 @@ export interface Project {
   url?: string;
   demoUrl?: string;
   paperUrl?: string;
+  pypiUrl?: string;
 }
 
 export interface Education {
@@ -21,7 +22,7 @@ export const projects: Project[] = [
     name: "MIC",
     fullName: "Make-it-Certain",
     description:
-      "An open-source data science platform for small businesses — currently supports time-series forecasting, with what-if scenario testing and classification coming soon.",
+      "An open-source data science platform empowering small-to-medium businesses with accessible ML tools — currently supports time-series forecasting, with what-if scenario testing and classification coming soon.",
     category: "application",
     url: "https://github.com/mbsuraj/mic",
     demoUrl: "https://make-it-certain.streamlit.app/",
@@ -34,6 +35,7 @@ export const projects: Project[] = [
     category: "research",
     url: "https://github.com/mbsuraj/StationarityToolkit",
     paperUrl: "https://arxiv.org/abs/2604.08676",
+    pypiUrl: "https://pypi.org/project/stationarityToolkit",
   },
 ];
 
@@ -83,6 +85,40 @@ export const recognitions: Recognition[] = [
       { label: "AFIT News", url: "https://www.afit.edu/ENS/news.cfm?article=0B6947" },
     ],
   },
+];
+
+export interface Membership {
+  organization: string;
+  abbreviation?: string;
+  url?: string;
+}
+
+export const memberships: Membership[] = [
+  {
+    organization: "International Institute of Forecasters",
+    abbreviation: "IIF",
+    url: "https://forecasters.org",
+  },
+  {
+    organization: "Journal of Open Source Software",
+    abbreviation: "JOSS",
+    url: "https://joss.theoj.org",
+  },
+  {
+    organization: "IEEE Transactions on Neural Networks and Learning Systems",
+    abbreviation: "IEEE TNNLS",
+    url: "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems",
+  },
+];
+
+export const researchInterests: string[] = [
+  "Statistics",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Agentic Workflows",
+  "Bayesian Statistics",
+  "Optimization Algorithms",
+  "Knowledge-Based AI",
 ];
 
 export const education: Education[] = [

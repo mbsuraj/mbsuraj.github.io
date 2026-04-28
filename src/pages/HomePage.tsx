@@ -70,6 +70,23 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      {/* Collaborate */}
+      <section className="rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-6 space-y-3">
+        <h2 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400 font-mono">
+          Open to Collaboration
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed max-w-2xl">
+          Interested in research collaborations around Bayesian statistics,
+          time-series forecasting, and applied ML. If you're working on
+          something in these areas, I'd love to connect.
+        </p>
+        <a
+          href="mailto:mbsuraj.asu@gmail.com"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white transition-colors"
+        >
+          Get in Touch
+        </a>
+      </section>
     </div>
   );
 }
