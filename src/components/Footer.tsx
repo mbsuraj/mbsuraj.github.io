@@ -1,8 +1,10 @@
 import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
+import { SiGooglescholar } from "react-icons/si";
 
 const links = [
   { href: "https://www.linkedin.com/in/mbsuraj/", icon: FiLinkedin, label: "LinkedIn" },
   { href: "https://github.com/mbsuraj", icon: FiGithub, label: "GitHub" },
+  { href: "https://scholar.google.com/citations?user=Cy3h5JoAAAAJ", icon: SiGooglescholar, label: "Google Scholar" },
   { href: "mailto:mbsuraj.asu@gmail.com", icon: FiMail, label: "Email" },
 ];
 

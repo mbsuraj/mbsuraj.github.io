@@ -1,9 +1,11 @@
 import { FiLinkedin, FiGithub, FiMail, FiFileText } from "react-icons/fi";
+import { SiGooglescholar } from "react-icons/si";
 import { skills } from "../data/skills";
 
 const socialLinks = [
   { href: "https://github.com/mbsuraj", icon: FiGithub, label: "GitHub" },
   { href: "https://www.linkedin.com/in/mbsuraj/", icon: FiLinkedin, label: "LinkedIn" },
+  { href: "https://scholar.google.com/citations?user=Cy3h5JoAAAAJ", icon: SiGooglescholar, label: "Google Scholar" },
   { href: "mailto:mbsuraj.asu@gmail.com", icon: FiMail, label: "Email" },
   { href: "#/cv", icon: FiFileText, label: "Resume" },
 ];
